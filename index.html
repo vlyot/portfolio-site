@@ -5,47 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ng Kai Chong's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="assets/fav-icon.jpg" />
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style/style.css" />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- AOS Library CSS for scroll animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   </head>
   <body>
-    <header>
-      <h4 class="logo"><a href="">Ng Kai Chong</a></h4>
-      <nav>
-        <ul class="nav_links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a class="nav_btn" href="mailto:ngkaichong10@gmail.com">
-        <button><i class="fa fa-envelope"></i> Email Me</button>
-      </a>
+    <!-- Header -->
+    <header data-aos="fade-down">
+      <div class="container">
+        <div class="logo">
+          <a href="#about">Ng Kai Chong</a>
+        </div>
+        <nav>
+          <ul class="nav_links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="nav_btn">
+          <!-- Updated email link -->
+          <a href="mailto:ckai12321@gmail.com">
+            <button><i class="fa fa-envelope"></i> Email Me</button>
+          </a>
+        </div>
+      </div>
     </header>
 
     <!-- About Section -->
-    <section id="about">
-      <div class="about">
-        <h3><span>Hello! I’m Ng Kai Chong —</span></h3>
+    <section id="about" data-aos="fade-up">
+      <div class="container">
+        <h1>Ng Kai Chong</h1>
         <h1>Aspiring Software Engineer</h1>
         <p>
-          I am currently pursuing a diploma in Information Technology at Ngee Ann Polytechnic,
-          specializing in Software Engineering. I am passionate about problem-solving and building 
-          meaningful applications that improve lives. My background in projects and leadership roles has
-          prepared me to thrive in collaborative environments.
+          Hello! I’m Ng Kai Chong, currently pursuing a diploma in Information Technology
+          at Ngee Ann Polytechnic with a focus on Software Engineering. I’m passionate about
+          problem-solving and building applications that make a difference.
         </p>
-        <a class="about_btn" href="mailto:ngkaichong10@gmail.com">
-        </a>
-
         <div class="about-icons">
-          <a href="https://www.linkedin.com/in/kai-chong-ng-217431273" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/kai-chong-ng-217431273"
+            target="_blank"
+            data-aos="fade-right"
+          >
             <i class="fa fa-linkedin-square"></i>
           </a>
-          <a href="https://github.com/vlyot" target="_blank">
+          <a
+            href="https://github.com/vlyot"
+            target="_blank"
+            data-aos="fade-left"
+          >
             <i class="fa fa-github"></i>
           </a>
         </div>
@@ -53,155 +70,173 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education">
-      <div class="education">
+    <section id="education" data-aos="fade-up">
+      <div class="container">
         <div class="edu-title">
           <h1>Education</h1>
-          <span>———o———</span>
-          <p>Academic Background</p>
         </div>
-
         <div class="row">
-          <div class="col1">
+          <div data-aos="zoom-in">
             <h2>Ngee Ann Polytechnic</h2>
             <p class="date-edu">2023 - 2026</p>
-            <p class="desc-edu">Diploma in Information Technology</p>
+            <p>Diploma in Information Technology</p>
           </div>
-
-          <div class="col3">
+          <div data-aos="zoom-in" data-aos-delay="200">
             <h2>North Vista Secondary School</h2>
             <p class="date-edu">2019 - 2022</p>
-            <p class="desc-edu">GCE O-Level</p>
+            <p>GCE O-Level</p>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="200">
+            <h2>Horizon Primary School</h2>
+            <p class="date-edu">2012 - 2018</p>
+            <p>PSLE</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
-      <div class="skill">
+    <section id="skills" data-aos="fade-up">
+      <div class="container">
         <div class="skill-title">
-          <h1>Skills</h1>
-          <span>——o—o——</span>
-          <p>Technical Proficiencies</p>
+          <h1>Industry-Relevant Skills</h1>
         </div>
-
         <div class="flex-wrapper">
-          <div class="items flex-grid">
-            <div class="d-col-1 t-col-4 m-col-12">
-              <img src="assets/html.png" alt="HTML" />
-              <p>HTML</p>
-              <p class="medium">Intermediate</p>
-            </div>
-            <div class="d-col-1 t-col-4 m-col-12">
-              <img src="assets/css.svg" alt="CSS" />
-              <p>CSS</p>
-              <p class="medium">Intermediate</p>
-            </div>
-            <div class="d-col-1 t-col-4 m-col-12">
-              <img src="assets/js.png" alt="JavaScript" />
-              <p>JavaScript</p>
-              <p class="basic">Basic</p>
-            </div>
-            <div class="d-col-1 t-col-4 m-col-12">
-              <img src="assets/reactjs.png" alt="ReactJS" />
-              <p>ReactJS</p>
-              <p class="basic">Basic</p>
-            </div>
+          <!-- Each .items div will scale up on hover and animate in via AOS -->
+          <div class="items" data-aos="zoom-in">
+            <img src="assets/html.png" alt="HTML" />
+            <p>HTML</p>
+            <p>Intermediate</p>
           </div>
-
-          <div class="items flex-grid">
-            <div class="d-col-1 t-col-4 m-col-12">
-              <img src="assets/python.png" alt="PHP" />
-              <p>Python</p>
-              <p class="basic">Basic</p>
-            </div>
-            <div class="d-col-1 t-col-4 m-col-12">
-              <img src="assets/figma.png" alt="Figma" />
-              <p>Figma</p>
-              <p class="basic">Basic</p>
-            </div>
-            <div class="d-col-1 t-col-4 m-col-12">
-              <img src="assets/github.png" alt="GitHub" />
-              <p>GitHub</p>
-              <p class="basic">Basic</p>
-            </div>
-            <div class="d-col-1 t-col-4 m-col-12">
-              <img src="assets/c++.png" alt="GitHub" />
-              <p>C++</p>
-              <p class="medium">Intermediate</p>
-            </div>
-            <div class="d-col-1 t-col-4 m-col-12">
-              <img src="assets/postman.png" alt="Postman" />
-              <p>Postman</p>
-              <p class="basic">Basic</p>
-            </div>
-            <div class="d-col-1 t-col-4 m-col-12">
-              <img src="assets/c-sharp-overview.png" alt="cs" />
-              <p>C#</p>
-              <p class="medium">Intermediate</p>
-            </div>
+          <div class="items" data-aos="zoom-in" data-aos-delay="100">
+            <img src="assets/css.svg" alt="CSS" />
+            <p>CSS</p>
+            <p>Intermediate</p>
+          </div>
+          <div class="items" data-aos="zoom-in" data-aos-delay="200">
+            <img src="assets/js.png" alt="JavaScript" />
+            <p>JavaScript</p>
+            <p>Basic</p>
+          </div>
+          <div class="items" data-aos="zoom-in" data-aos-delay="300">
+            <img src="assets/reactjs.png" alt="ReactJS" />
+            <p>ReactJS</p>
+            <p>Basic</p>
+          </div>
+          <div class="items" data-aos="zoom-in" data-aos-delay="400">
+            <img src="assets/python.png" alt="Python" />
+            <p>Python</p>
+            <p>Basic</p>
+          </div>
+          <div class="items" data-aos="zoom-in" data-aos-delay="500">
+            <img src="assets/figma.png" alt="Figma" />
+            <p>Figma</p>
+            <p>Basic</p>
+          </div>
+          <div class="items" data-aos="zoom-in" data-aos-delay="600">
+            <img src="assets/github.png" alt="GitHub" />
+            <p>GitHub</p>
+            <p>Basic</p>
+          </div>
+          <div class="items" data-aos="zoom-in" data-aos-delay="700">
+            <img src="assets/c++.png" alt="C++" />
+            <p>C++</p>
+            <p>Intermediate</p>
+          </div>
+          <div class="items" data-aos="zoom-in" data-aos-delay="800">
+            <img src="assets/postman.png" alt="Postman" />
+            <p>Postman</p>
+            <p>Basic</p>
+          </div>
+          <div class="items" data-aos="zoom-in" data-aos-delay="900">
+            <img src="assets/c-sharp-overview.png" alt="C#" />
+            <p>C#</p>
+            <p>Intermediate</p>
           </div>
         </div>
-        
       </div>
     </section>
-    <section id="certifications">
-      <div class="certifications">
+
+    <!-- Certifications Section -->
+    <section id="certifications" data-aos="fade-up">
+      <div class="container">
         <div class="certifications-title">
           <h1>Certifications</h1>
-          <span>——o—o—o——</span>
-          <p>My Certifications</p>
-          <br>
-          <p>To boost my learning, I enrolled myself in multiple courses during my studies and plan to keep on learning.</p>
-          <p>They can be found on my linkedin page as well.</p>
+          <p>
+            To boost my learning, I enrolled in multiple courses during my studies and plan to keep
+            on learning.
+          </p>
         </div>
-    
         <div class="certifications-grid">
-          <div class="certification-item">
+          <div class="certification-item" data-aos="flip-left">
             <img src="assets/psm-1.png" alt="Professional Scrum Master I" />
             <h3>Professional Scrum Master I</h3>
-            <p>Certification from Scrum.org validating my knowledge of agile and scrum practices.</p>
+            <p>
+              Certification from Scrum.org validating my knowledge of agile and scrum practices.
+            </p>
           </div>
-          <div class="certification-item">
+          <div class="certification-item" data-aos="flip-left" data-aos-delay="200">
             <img src="assets/aws.png" alt="AWS Junior Software Developer" />
             <h3>AWS Junior Software Developer</h3>
-            <p>Credential from Amazon recognizing skills in cloud development and programming.</p>
+            <p>
+              Credential from Amazon recognizing skills in cloud development and programming.
+            </p>
           </div>
-          <div class="certification-item">
+          <div class="certification-item" data-aos="flip-left" data-aos-delay="400">
             <img src="assets/linkfs.png" alt="Full-Stack Web Developer Pathway" />
             <h3>Full-Stack Web Developer Pathway</h3>
-            <p>Completion of LinkedIn Learning's comprehensive full-stack development track.</p>
+            <p>
+              Completion of LinkedIn Learning's comprehensive full-stack development track.
+            </p>
           </div>
-          <div class="certification-item">
-            <img src="assets/Duke.png" alt="duke" />
-            <h3>Fundamentals of front end development</h3>
-            <p>Completion of Duke University's comprehensive front end development module. I am currently pursuing Duke University's Java Programming and Software Engineering Fundamentals Specialization</p>
+          <div class="certification-item" data-aos="flip-left" data-aos-delay="600">
+            <img src="assets/Duke.png" alt="Duke University Certification" />
+            <h3>Java Programming: Solving Problems With Software</h3>
+            <p>
+              Completion of Duke University's comprehensive Java development module. I’m
+              currently extending this into a Java Programming and Software Engineering
+              Fundamentals Specialization.
+            </p>
           </div>
         </div>
       </div>
     </section>
-    
+
     <!-- Contact Section -->
-    <section id="contact">
-      <div class="contact">
+    <section id="contact" data-aos="fade-up">
+      <div class="container">
         <div class="contact-title">
           <h1>Contact</h1>
-          <span>——o—o—o——</span>
           <p>Let’s Get in Touch</p>
-          <br>
-          <p>Please do not hesitate to get in touch with me through linkedin and email. Thanks for taking the time to look at my portfolio!</p>
-          <br>
-          <br>
-          <br>
+          <p>
+            Please do not hesitate to get in touch with me via LinkedIn or email. Thanks for
+            visiting my portfolio!
+          </p>
         </div>
+        <form action="mailto:ckai12321@gmail.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
       </div>
     </section>
 
-    <footer>
-      <p>&copy; Ng Kai Chong, 2025. All rights reserved.</p>
+    <!-- Footer -->
+    <footer data-aos="fade-up">
+      <div class="container">
+        <p>&copy; Ng Kai Chong, 2025. All rights reserved.</p>
+      </div>
     </footer>
 
-    <script src="script.js" type="text/javascript"></script>
+    <!-- AOS Library JS for scroll animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // animation duration (ms)
+        once: true   // whether animation should happen only once while scrolling down
+      });
+    </script>
   </body>
 </html>
+
